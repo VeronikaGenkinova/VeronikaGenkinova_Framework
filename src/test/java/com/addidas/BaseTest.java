@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    private static WebDriver webDriver;
+    protected static WebDriver webDriver;
     private static final int WAIT = 3000;
 
     @BeforeAll
