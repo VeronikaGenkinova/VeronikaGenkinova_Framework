@@ -1,16 +1,13 @@
 package com.addidas.login;
 
-import com.addidas.BaseTest;
 import com.addidas.drivermanagers.WebDriverFactory;
 import com.addidas.flow.LoginFlow;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
-import java.time.Duration;
-
 import static com.addidas.utils.PopUpHelpers.closeSubscriptionPopUp;
 
-public class LoginTest extends BaseTest {
+public class LoginTest {
 
     private static WebDriver webDriver;
     private LoginFlow loginFlow = new LoginFlow(webDriver);
@@ -55,6 +52,11 @@ public class LoginTest extends BaseTest {
     @AfterEach
     public void cleanAllCookies() {
         webDriver.manage().deleteAllCookies();
+    }
+
+    @AfterAll
+    public static void quitWebDriver() {
+        webDriver.quit();
     }
 }
 

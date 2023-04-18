@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class CartPage extends AbstractPage {
     private static final By PAGE_HEADER = By.xpath("//div[@class='empty__title']");
-    private static final By EMTY_NOTIFICATION = By.xpath("//p[@class='common-text empty__text']");
+    private static final By EMPTY_NOTIFICATION = By.xpath("//p[@class='common-text empty__text']");
 
     public CartPage(WebDriver webDriver) {
         super(webDriver);
@@ -18,7 +18,6 @@ public class CartPage extends AbstractPage {
     }
 
     public WebElement getEmptyCartNotification() {
-        return webDriver.findElement(EMTY_NOTIFICATION);
+        return webDriver.findElement(EMPTY_NOTIFICATION);
     }
-
 }

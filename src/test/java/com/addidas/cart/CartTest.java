@@ -1,15 +1,13 @@
 package com.addidas.cart;
 
-import com.addidas.BaseTest;
 import com.addidas.drivermanagers.WebDriverFactory;
 import com.addidas.flow.CartFlow;
-
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
 import static com.addidas.utils.PopUpHelpers.closeSubscriptionPopUp;
 
-public class CartTest extends BaseTest {
+public class CartTest {
 
     private static WebDriver webDriver;
     private CartFlow cartFlow = new CartFlow(webDriver);
@@ -46,6 +44,11 @@ public class CartTest extends BaseTest {
     @AfterEach
     public void cleanAllCookies() {
         webDriver.manage().deleteAllCookies();
+    }
+
+    @AfterAll
+    public static void quitWebDriver() {
+        webDriver.quit();
     }
 }
 
