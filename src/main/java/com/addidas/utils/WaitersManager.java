@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class WaitersManager {
 
-    private static final int TIME_OUT = 15;
+    private static final int TIME_OUT = 6;
 
     private WaitersManager() {
     }
